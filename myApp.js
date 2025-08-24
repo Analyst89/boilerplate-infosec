@@ -1,9 +1,11 @@
 const express = require('express');
 const helmet = require('helmet');
+const respit = require('respit');
+
 const app = express();
 
-app.use(helmet.hidePoweredBy());
 app.use(helmet.noSniff());
+app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({ action: 'deny' }));
 app.use(helmet.xssFilter());
 
