@@ -1,14 +1,11 @@
 const bcrypt = require('bcrypt');
-const plainTextPassword = 'FCC_is_awesome';
+
+const password = 'FCC_is_awesome';
 const saltRounds = 12;
 
-bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
-  if (err) {
-    console.error('Error hashing password:', err);
-  } else {
-   module.exports = hash;
-  }
-});
+const hash = bcrypt.hashSync(password, saltRounds);
+module.exports = hash;
+
 
 
 
