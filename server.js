@@ -1,15 +1,4 @@
-const bcrypt = require('bcrypt');
 
-const password = 'FCC_is_awesome';
-const saltRounds = 12;
-
-// Only run this once
-const hash = bcrypt.hashSync(password, saltRounds);
-
-// Log to console, not to DOM
-console.log('Hashed password:', hash);
-
-module.exports = hash;
 
 
 
