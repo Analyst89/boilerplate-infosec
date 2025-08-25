@@ -3,7 +3,7 @@
  * the verification process may break
  *******************************************/
 const bcrypt = require('bcrypt');
-const plainTextPassword = '$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm';
+const plainTextPassword = 'FCC_is_awesome';
 const saltRounds = 12;
 
 bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
